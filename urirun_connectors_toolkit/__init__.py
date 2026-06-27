@@ -1,1 +1,0 @@
-"""urirun connector authoring toolkit."""
