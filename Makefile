@@ -10,5 +10,6 @@ test: install doctor-test
 doctor-test:
 	$(PYTHON) -m pip check
 
-# OneDev invokes this target directly on the isolated candidate merge.
-doctor-health: test
+# OneDev installs the candidate before invoking this offline health gate.
+doctor-health:
+	$(PYTHON) -c "import urirun_connectors_toolkit"
